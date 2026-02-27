@@ -20,7 +20,7 @@ The core skills you will develop are: **repository management** (structuring com
 
 ## The Git Safety Framework
 
-Use this for every exercise. Before doing anything with Git, run through these six steps:
+The chapter lessons taught individual Git skills — committing, branching, pushing, reviewing. This framework assembles those skills into a single disciplined process. Use it for every exercise. Before doing anything with Git, run through these six steps:
 
 1. **Assess** — What is the current state? Run `git status`, `git log --oneline`, and `git branch`. Understand where you are before moving.
 2. **Plan** — What needs to happen? What is the safest path to get there? What could go wrong?
@@ -145,9 +145,11 @@ The biggest barrier to using Git effectively is fear. Fear of losing work. Fear 
 
 **Your Task:** Run each setup script to create the broken state, then fix it using the appropriate recovery tool: `git restore` for unstaged, `git restore --staged` for staged, `git revert` for committed.
 
+**New command: `git revert`** — The chapter lessons taught `git reset HEAD~1` to undo a commit you haven't pushed. `git revert` is the safer alternative when history has been shared (pushed to GitHub) — instead of erasing the commit, it creates a new commit that reverses the changes.
+
 **What You'll Learn:**
 - The three levels of "undo" in Git (working directory, staging area, committed)
-- Why `git revert` creates a new commit instead of deleting the old one
+- Why `git revert` creates a new commit instead of deleting the old one — and when to use it vs `git reset HEAD~1`
 - How to use `git add -p` for partial staging when changes are mixed
 
 **Reflection Questions:**
@@ -194,6 +196,8 @@ Branches are Git's superpower for experimentation. Instead of making changes and
 **The Problem:** A URL shortener project has three problems. Someone committed to the wrong branch — a storage change ended up on the analytics branch. Two branches modify the same file differently, creating a merge conflict. And a useful utility branch was never merged, leaving code orphaned.
 
 **Your Task:** Run `setup.sh` to create the tangled state, then untangle it: identify the misplaced commit, merge the orphaned branch, resolve the merge conflict, and produce a clean `main` branch with all features.
+
+**New commands:** `git cherry-pick <commit-hash>` copies a specific commit from any branch onto your current branch. When two branches modify the same lines, Git marks the conflict with `<<<<<<<`, `=======`, `>>>>>>>` markers — resolve by choosing the correct code, deleting the markers, then `git add` and `git commit`.
 
 **What You'll Learn:**
 - How to use `git cherry-pick` to move commits between branches

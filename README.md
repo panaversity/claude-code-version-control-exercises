@@ -1,6 +1,6 @@
 # Version Control & Safe Experimentation — Exercise Pack
 
-**Chapter 11 Exercises: Master Git workflows for AI-assisted development through hands-on practice**
+**Exercises for the Version Control & Safe Experimentation chapter: Master Git workflows for AI-assisted development through hands-on practice**
 
 _By Panaversity — Learn by Doing, Not by Reading_
 
@@ -46,13 +46,6 @@ claude-code-version-control-exercises/
 4. Start Claude Code and work through the exercise
 5. Use Git commands directly in the terminal
 
-### With Cowork (Browser)
-
-1. Open the exercise folder in Cowork
-2. Read `INSTRUCTIONS.md` for the exercise
-3. Use the integrated terminal for Git commands
-4. Ask Cowork to explain concepts you don't understand
-
 ## Recommended Order
 
 Work through one module per session. Each module has two exercises:
@@ -86,7 +79,7 @@ Use this mental checklist for every exercise:
 - Python 3.10+ installed (`python --version`)
 - GitHub account (for Modules 4-5 and Capstones B-C)
 - GitHub CLI recommended (`gh --version`)
-- Claude Code or Cowork access
+- Claude Code access
 
 ## Important Notes
 
